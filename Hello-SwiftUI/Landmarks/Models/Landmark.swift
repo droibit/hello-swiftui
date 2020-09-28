@@ -1,14 +1,14 @@
-//
-//  Landmark.swift
-//  Hello-SwiftUI
-//
-//  Created by Shinya Kumagai on 2020/09/27.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+The model for an individual landmark.
+*/
 
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Identifiable, Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     fileprivate var imageName: String
@@ -16,18 +16,19 @@ struct Landmark: Identifiable, Hashable, Codable {
     var state: String
     var park: String
     var category: Category
-    
+    var isFavorite: Bool
+
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
-            longitude: coordinates.longitude
-        )
+            longitude: coordinates.longitude)
     }
-    
-    enum Category:String, CaseIterable, Codable, Hashable {
+
+    enum Category: String, CaseIterable, Codable, Hashable {
         case featured = "Featured"
         case lakes = "Lakes"
         case rivers = "Rivers"
+        case mountains = "Mountains"
     }
 }
 

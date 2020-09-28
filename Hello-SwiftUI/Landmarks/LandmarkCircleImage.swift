@@ -1,5 +1,5 @@
 //
-//  LandmarksCircleImage.swift
+//  LandmarkCircleImage.swift
 //  Hello-SwiftUI
 //
 //  Created by Shinya Kumagai on 2020/09/27.
@@ -19,8 +19,9 @@ struct LandmarkCircleImage: View {
     }
 }
 
-struct LandmarksCircleImage_Previews: PreviewProvider {
+struct LandmarkCircleImage_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkCircleImage(image: Image("turtlerock"))
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
     }
 }
