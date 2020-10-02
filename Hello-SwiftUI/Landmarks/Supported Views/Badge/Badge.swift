@@ -1,5 +1,5 @@
 //
-//  LandmarkBadge.swift
+//  Badge.swift
 //  Hello-SwiftUI
 //
 //  Created by Shinya Kumagai on 2020/09/29.
@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct LandmarkBadge: View {
+struct Badge: View {
     static let rotationCount = 8
     
     var badgeSymbols: some View {
         ForEach(0..<Self.rotationCount) { i in
-            LandmarkRotatedBadgeSymbol(angle: .init(degrees: Double(i) / Double(Self.rotationCount)) * 360.0)
+            RotatedBadgeSymbol(angle: .init(degrees: Double(i) / Double(Self.rotationCount)) * 360.0)
         }.opacity(0.5)
     }
     
     var body: some View {
         ZStack {
-            LandmarkBadgeBackground()
+            BadgeBackground()
             
             GeometryReader { geometry in
                 self.badgeSymbols
@@ -33,8 +33,8 @@ struct LandmarkBadge: View {
     }
 }
 
-struct LandmarkBadge_Previews: PreviewProvider {
+struct Badge_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkBadge()
+        Badge()
     }
 }

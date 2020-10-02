@@ -1,5 +1,5 @@
 //
-//  LandmarkBadgeBackground.swift
+//  BadgeBackground.swift
 //  Hello-SwiftUI
 //
 //  Created by Shinya Kumagai on 2020/09/29.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LandmarkBadgeBackground: View {
+struct BadgeBackground: View {
     var body: some View {
         GeometryReader { geometry in
             Path { path in
@@ -48,16 +48,16 @@ struct LandmarkBadgeBackground: View {
                 startPoint: .init(x: 0.5, y: 0),
                 endPoint: .init(x: 0.5, y: 0.6)
             ))
-//            .aspectRatio(1, contentMode: .fit)
+            .aspectRatio(1, contentMode: .fit)
         }
     }
     
     static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
     static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)}
 
-struct LandmarkBadgeBackground_Previews: PreviewProvider {
+struct BadgeBackground_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkBadgeBackground()
+        BadgeBackground()
             .previewDevice("iPhone SE (2nd generation)")
     }
 }

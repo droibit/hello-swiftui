@@ -1,5 +1,5 @@
 //
-//  LandmarksMapView.swift
+//  MapView.swift
 //  Hello-SwiftUI
 //
 //  Created by Shinya Kumagai on 2020/09/27.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct LandmarkMapView: UIViewRepresentable {
+struct MapView: UIViewRepresentable {
     var coordinate: CLLocationCoordinate2D
         
     func makeUIView(context: Context) -> MKMapView {
@@ -23,8 +23,8 @@ struct LandmarkMapView: UIViewRepresentable {
     }
 }
 
-struct LandmarksMapView_Previews: PreviewProvider {
+struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkMapView(coordinate: landmarkData[0].locationCoordinate)
+        MapView(coordinate: landmarkData[0].locationCoordinate)
     }
 }

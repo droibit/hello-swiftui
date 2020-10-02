@@ -1,5 +1,5 @@
 //
-//  LandmarkBadgeSymbol.swift
+//  BadgeSymbol.swift
 //  Hello-SwiftUI
 //
 //  Created by Shinya Kumagai on 2020/09/29.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LandmarkBadgeSymbol: View {
+struct BadgeSymbol: View {
     static let symbolColor = Color(red: 79.0 / 255, green: 79.0 / 255, blue: 191.0 / 255)
     
     var body: some View {
@@ -42,8 +42,8 @@ struct LandmarkBadgeSymbol: View {
     }
 }
 
-struct LandmarkBadgeSymbol_Previews: PreviewProvider {
+struct BadgeSymbol_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkBadgeSymbol()
+        BadgeSymbol()
     }
 }
